@@ -8,8 +8,9 @@ background-color: #FF0000;
 
 export const Menu = styled.div`
 display: flex;
-background-color: #00FF00;
-width: 80px
+background-color: #136713;
+width: 80px;
+flex-direction: column;
 `;
 
 export const PageBody = styled.div`
