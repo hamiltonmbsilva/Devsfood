@@ -3,7 +3,7 @@ import { Container, Logo, SearchInput } from './styled';
 
 export default ({search, onSearch }) => {
     
-    const [inputActive, setInputActive] = useState(false);
+    const [inputActive, setInputActive] = useState(search == '' ? false : true);
 
     const handleInputFocus = () => {
         setInputActive(true);
