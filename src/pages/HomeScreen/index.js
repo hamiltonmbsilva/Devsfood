@@ -40,13 +40,15 @@ export default () => {
                                 title:'Todas as categorias', 
                                 image:'/assets/food-and-restaurant.png'
                             }}
-                            activeCategory={activeCategory}                         
+                            activeCategory={activeCategory} 
+                            serActiveCategory={serActiveCategory}                        
                         />  
                         {categories.map((item, index)=>(
                             <CategoryItem 
                                 key={index} 
                                 data={item} 
                                 activeCategory={activeCategory}
+                                serActiveCategory={serActiveCategory}
                             />
                         ))}
                     </CategoryList>
