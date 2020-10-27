@@ -26,6 +26,11 @@ export default () => {
         getCategories();
     }, []);
 
+    useEffect(()=>{
+        
+
+    }, [activeCategory]);
+
     return (
         <Container>
             <Header search={headerSearch} onSearch={setHeaderSearch} />
