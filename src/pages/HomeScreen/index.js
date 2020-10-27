@@ -11,6 +11,8 @@ export default () => {
     const history = useHistory();
     const [headerSearch, setHeaderSearch] = useState('');
     const [categories, setCategories] = useState([]);
+
+    const [activeCategory, serActiveCategory] = useState(0);
     
     useEffect(()=>{
         const getCategories = async () => {
@@ -33,16 +35,18 @@ export default () => {
                     Selecione uma categoria
                     <CategoryList>
                         <CategoryItem 
-                        data={{
-                            id:'', 
-                            title:'Todas as categorias', 
-                            image:'/assets/food-and-restaurant.png'
-                        }}                         
+                            data={{
+                                id:0, 
+                                title:'Todas as categorias', 
+                                image:'/assets/food-and-restaurant.png'
+                            }}
+                            activeCategory={activeCategory}                         
                         />  
                         {categories.map((item, index)=>(
                             <CategoryItem 
                                 key={index} 
                                 data={item} 
+                                activeCategory={activeCategory}
                             />
                         ))}
                     </CategoryList>
