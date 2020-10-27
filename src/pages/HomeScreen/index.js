@@ -32,7 +32,19 @@ export default () => {
                 <CategoryArea>
                     Selecione uma categoria
                     <CategoryList>
-                        <CategoryItem title="Todas as categorias" image="food-and-restaurant.png" />  
+                        <CategoryItem 
+                        data={{
+                            id:'', 
+                            title:'Todas as categorias', 
+                            image:'/assets/food-and-restaurant.png'
+                        }}                         
+                        />  
+                        {categories.map((item, index)=>(
+                            <CategoryItem 
+                                key={index} 
+                                data={item} 
+                            />
+                        ))}
                     </CategoryList>
                 </CategoryArea>
             }

@@ -10,5 +10,7 @@ export const CategoryArea = styled.div`
 
 `;
 
-export const CategoryList = styled.div``;
+export const CategoryList = styled.div`
+    display: flex;
+`;
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container } from './styled';
+import { Container, CategoryImage } from './styled';
 
-export default () => {
+export default ({data}) => {
     return(
         <Container>
-        
+            <CategoryImage src={data.image} />
         </Container>
     );
 }
