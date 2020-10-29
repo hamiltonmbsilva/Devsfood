@@ -12,6 +12,8 @@ export default ({data, activeCategory, serActiveCategory}) => {
             active={activeCategory} 
             id={data.id}
             onClick={handleCategoryClick}
+            data-tip="Exemplo"
+            data-for="tip-top"
         >
             <CategoryImage src={data.image} />
         </Container>

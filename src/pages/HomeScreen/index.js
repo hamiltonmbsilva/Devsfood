@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
+import ReactTooltip from 'react-tooltip';
 import { Container, CategoryArea, CategoryList } from './styled';
 
 import api from '../../api';
@@ -21,6 +22,8 @@ export default () => {
             if( cat.error == ''){
                 setCategories(cat.result);
             }
+
+            ReactTooltip.rebuild();
         };
 
         getCategories();
