@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import { Container, Menu, PageBody } from './AppStyled';
 
@@ -40,6 +41,8 @@ export default () => {
                     </Switch>
                 </PageBody> 
                 <Cart />
+                <ReactTooltip id="tip-top" place="top" effect="solid" />
+                <ReactTooltip id="tip-right" place="right" effect="solid" />
             </Container>
         </BrowserRouter>
     );
