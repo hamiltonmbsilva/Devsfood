@@ -14,6 +14,13 @@ export default () => {
     const [categories, setCategories] = useState([]);
 
     const [activeCategory, serActiveCategory] = useState(0);
+
+    const getProducts = async () => {
+        const prods = await api.getProducts();
+        if(prods.error == ''){
+            
+        }
+    }
     
     useEffect(()=>{
         const getCategories = async () => {
@@ -30,7 +37,7 @@ export default () => {
     }, []);
 
     useEffect(()=>{
-        
+        getProducts();
 
     }, [activeCategory]);
 
