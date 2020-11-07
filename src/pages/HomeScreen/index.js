@@ -100,7 +100,11 @@ export default () => {
             {totalPages > 0 && 
                 <ProductPaginationArea>
                     {Array(totalPages).fill(0).map((item, index)=>(
-                        <ProductPaginationItem key={index}>
+                        <ProductPaginationItem 
+                            key={index} 
+                            active={activePage}
+                            current={index + 1}
+                        >
                             {index + 1}
                         </ProductPaginationItem>
                     ))}
