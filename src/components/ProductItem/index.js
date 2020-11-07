@@ -23,7 +23,7 @@ export default ({data}) =>{
 
             <ProductInfoArea>
                 <ProductName>{data.name}</ProductName>
-                <ProductPrice>{data.price}</ProductPrice>
+                <ProductPrice>R$ {data.price}</ProductPrice>
                 <ProductIngredients>{data.ingredients}</ProductIngredients>
             </ProductInfoArea>
 
