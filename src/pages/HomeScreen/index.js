@@ -51,9 +51,10 @@ export default () => {
     }, []);
 
     useEffect(()=>{
+        setProducts([]);
         getProducts();
 
-    }, [activeCategory]);
+    }, [activeCategory, activePage]);
 
     return (
         <Container>
@@ -104,6 +105,7 @@ export default () => {
                             key={index} 
                             active={activePage}
                             current={index + 1}
+                            onClick={()=>setActivePage(index+1)}
                         >
                             {index + 1}
                         </ProductPaginationItem>
