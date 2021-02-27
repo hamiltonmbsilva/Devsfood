@@ -27,7 +27,7 @@ export default () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
 
-    const [ModalStatus, setModalSatatus] = useState(false);
+    const [ModalStatus, setModalStatus] = useState(true);
 
     const [activeCategory, serActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(1);
@@ -125,7 +125,7 @@ export default () => {
                 </ProductPaginationArea>
             }
 
-            <Modal status = {ModalStatus}>
+            <Modal status={ModalStatus} setStatus={setModalStatus}>
                 Conteudo do modal
             </Modal>
         </Container>

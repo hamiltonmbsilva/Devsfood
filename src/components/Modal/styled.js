@@ -13,8 +13,11 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const ModalBody = styled.div`
-    width: 300px;
-    height: 300px;
+export const ModalBody = styled.div`    
     background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px opx 50px #000;
+    max-width: 100vh;
+    max-height: 95vh;
+    overflow: auto;
 `;
