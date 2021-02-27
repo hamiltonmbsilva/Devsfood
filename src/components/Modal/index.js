@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container } from './styled';
+import { Container, ModalBody } from './styled';
 
-export default () => {
+export default ({ status, children }) => {
     return (
-        <Container>
-            
+        <Container status={status}>
+            <ModalBody>
+                {children}
+            </ModalBody>
         </Container>
     );
 }
