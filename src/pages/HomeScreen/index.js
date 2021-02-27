@@ -31,7 +31,7 @@ export default () => {
     const [activeSearch, setActiveSearch] = useState('');
 
     const getProducts = async () => {
-        const prods = await api.getProducts();
+        const prods = await api.getProducts(activeCategory, activePage, activeSearch);
         if(prods.error == ''){
             setProducts(prods.result.data);
             setTotalPages(prods.result.pages);
