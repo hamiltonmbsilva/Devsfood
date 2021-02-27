@@ -8,22 +8,8 @@ export default {
         return json; 
     },
 
-    getProducts: async (category, page, search) =>{
-
-        let fields = {};
-        if(category !== 0){
-            fields.category = category;
-        }
-        if(page > 0){
-            fields.page = page;
-        }
-        if(search != ''){
-            fields.search = search;
-        }
-
-        let queryString = new URLSearchParams(fields).toString();
-
-        const res = await fetch(BASE+'/products?'+queryString);
+    getProducts: async () =>{
+        const res = await fetch(BASE+'/products');
         const json = await res.json();
         return json;  
     }
