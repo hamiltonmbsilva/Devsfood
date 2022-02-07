@@ -28,7 +28,8 @@ export default () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
 
-    const [ModalStatus, setModalStatus] = useState(true);
+    const [modalStatus, setModalStatus] = useState(false);
+    const [modalData, setModalData] = useState({});
 
     const [activeCategory, serActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(1);
@@ -69,6 +70,11 @@ export default () => {
         getProducts();
     }, [activeCategory, activePage, activeSearch]);
 
+    const handleProductClick = (data) => {
+        setModalData(data);
+        setModalStatus(true);
+    }
+
     return (
         <Container>
             <Header search={headerSearch} onSearch={setHeaderSearch} />
@@ -105,6 +111,7 @@ export default () => {
                             <ProductItem 
                                 key={index}
                                 data={item}
+                                onClick={handleProductClick}
                             />
                         ))}
                     </ProductList>
@@ -126,8 +133,8 @@ export default () => {
                 </ProductPaginationArea>
             }
 
-            <Modal status={ModalStatus} setStatus={setModalStatus}>
-                <ModalProduct />
+            <Modal status={modalStatus} setStatus={setModalStatus}>
+                <ModalProduct data={modalData} />
             </Modal>
         </Container>
     );
