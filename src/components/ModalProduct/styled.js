@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 740px;
+    width: 650px;
     padding: 20px;
 `;
 
@@ -34,8 +34,7 @@ export const ProductDetails = styled.div`
     
 `;
 export const ProductQuantityArea = styled.div`
-    height: 50px;    
-    background-color:#0000FF;
+    height: 50px;  
     display: flex;
     justify-content: space-between;
 `;
@@ -63,14 +62,20 @@ export const ProductButton = styled.button`
 
 export const ProductQuantity = styled.div`
     display: flex;
+    align-items: center;
+    background-color:#073C07;
+    border-radius: 5px;
 `;
-export const ProductQtImage = styled.image`
+export const ProductQtImage = styled.img`
     width: 24px;
-    height: auto;
+    height: auto;    
+    margin-left: 10px;
+    margin-right: 10px;
 `;
 export const ProductQtTesxt = styled.div`
     font-size: 25px;
     font-weight: bold;
+    color: #FFF;
 `;
 export const ProductPrice = styled.div`
     font-size: 30px;

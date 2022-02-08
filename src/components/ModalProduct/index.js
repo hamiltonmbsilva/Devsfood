@@ -28,12 +28,12 @@ export default ({ data }) => {
                     </ProductDetails>
                     <ProductQuantityArea>
                        <ProductQuantity>
-                            <ProductQtImage src="" />
+                            <ProductQtImage src="/assets/minus.png" />
                                 <ProductQtTesxt>9</ProductQtTesxt>
-                            <ProductQtImage src="" />
+                            <ProductQtImage src="/assets/plus.png" />
                        </ProductQuantity>
                        <ProductPrice>
-                            R$ {data.Price}
+                            R$ {data.price}
                        </ProductPrice>
 
                     </ProductQuantityArea>
