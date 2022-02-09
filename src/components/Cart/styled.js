@@ -32,4 +32,38 @@ export const CartText = styled.div`
 
 export const CartBody = styled.div`
     display: ${props=>props.show ? 'block' : 'none'};
+    color: #FFF;
+`;
+
+export const ProductsArea = styled.div`
+
+`; 
+
+export const ProductItem = styled.div`
+    display: flex;
+    margin: 10px;
+`;
+
+export const ProductPhoto = styled.img`
+    width: 64px;
+    height: auto;
+    border-radius: 10px;
+`;
+
+export const ProductInfoArea = styled.div`
+    flex: 1;
+    margin-left: 10px;
+`;
+
+export const ProductName = styled.div`
+    font-size: 15px;
+    font-weight: bold;
+`;
+
+export const ProductPrice = styled.div`
+    font-size: 15px;
+`;
+
+export const ProductQuanttyArea = styled.div`
+
 `;
