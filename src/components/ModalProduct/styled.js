@@ -50,20 +50,21 @@ export const ProductIngredients = styled.div`
 
 export const ProductButton = styled.button`
     border: 0;
-    background-color:#073C07;
-    box-shadow:4px 5px 0px #999;
+    background-color: #073C07;
+    box-shadow: 4px 5px 0px #999;
     color: #FFF;
-    font-size: ${propos=>propos.small ? '13px' : '22px'};
+    font-size: ${props=>props.small ? '13px' : '22px'};
     font-weight: bold;
-    padding: ${propos=>propos.small ? '5px 10px' : '22px'};
+    padding: ${props=>props.small ? '5px 10px' : '10px 20px'};
     margin-left: 10px;
     border-radius: 5px;
+    cursor:pointer;
 `;
 
 export const ProductQuantity = styled.div`
     display: flex;
     align-items: center;
-    background-color:#073C07;
+    background-color: #073C07;
     border-radius: 5px;
 `;
 export const ProductQtImage = styled.img`
@@ -71,6 +72,7 @@ export const ProductQtImage = styled.img`
     height: auto;    
     margin-left: 10px;
     margin-right: 10px;
+    cursor:pointer;
 `;
 export const ProductQtTesxt = styled.div`
     font-size: 25px;
