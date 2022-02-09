@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { 
     Container, 
     ProductArea,
@@ -44,8 +44,8 @@ export default ({ data, setStatus }) => {
         //mandar para reducer
         dispatch({
             type: 'ADD_PRODUCT',
-            payload:{data, qt}
-        });
+            payload:{data, qt}            
+        });        
         //fechar o modal
         setStatus(false);
     }

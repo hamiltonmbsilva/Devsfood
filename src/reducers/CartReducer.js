@@ -5,22 +5,27 @@ const initialState = {
     delivery:0
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState, action) => {    
     switch(action.type) {
         case 'ADD_PRODUCT':
             let products = [...state.products];
+            
             let id = action.payload.data.id;
-
-            let index = products.findIndex(item => item.id === id);
-
-            if(index > -1){
+            
+            let index = products.findIndex(item => item.id == id);
+            
+            if(index > -1){                
                 products[index].qt += action.payload.qt;
+                console.log('teste 4',  products)
             }else{
+                console.log(products)
                 products.push({
                     ...action.payload.data,
                     qt: action.payload.qt
                 });
             }
+
+            console.log(products);
 
             return {...state, products};
         break;
