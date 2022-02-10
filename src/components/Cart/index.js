@@ -29,6 +29,7 @@ export default () => {
 
     const handleProductChange = (key, type) =>{      
         dispach({
+            //build
             type:'CHANGE_PRODUCT',
             payload:{
                 key, type
